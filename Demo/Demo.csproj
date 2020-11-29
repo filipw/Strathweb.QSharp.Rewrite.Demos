@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.Quantum.Sdk/0.14.2011120240">
+
+  <PropertyGroup>
+    <QscVerbosity>Detailed</QscVerbosity>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RewritePlugin\RewritePlugin.csproj" IsQscReference="true" Priority="0" />
+  </ItemGroup>
+ 
+</Project>
