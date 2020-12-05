@@ -5,6 +5,15 @@
     @EntryPoint()
     operation Main() : Unit {
         let message = "World";
-        Message($"Hello{message}");
+        Message($"Hello {message}");
+    }
+
+    function add(n : Int, m : Int) : Int {
+        return n + m;
+    }
+
+    operation bellState(q1 : Qubit, q2 : Qubit) : Unit is Adj {
+        H(q1);
+        CNOT(q1, q2);
     }
 }
