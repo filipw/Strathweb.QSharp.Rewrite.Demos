@@ -9,7 +9,7 @@ using Microsoft.Quantum.QsCompiler.SyntaxTree;
 
 namespace Strathweb.QSharp.Rewrite.Demos
 {
-    public class SamplePlugin : IRewriteStep
+    public class CaseBasedModifiersRewriteStep : IRewriteStep
     {
         private readonly List<IRewriteStep.Diagnostic> _diagnostics = new List<IRewriteStep.Diagnostic>();
         public string Name => "Case-based Access Modifiers";
