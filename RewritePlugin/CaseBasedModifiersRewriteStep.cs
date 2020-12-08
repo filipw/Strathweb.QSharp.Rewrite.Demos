@@ -44,20 +44,8 @@ namespace Strathweb.QSharp.Rewrite.Demos
 
         public bool Transformation(QsCompilation compilation, out QsCompilation transformed)
         {
-            Console.WriteLine("Callables before transformation:");
-            foreach (var callable in compilation.Namespaces.Callables().Where(c => c.SourceFile.EndsWith(".qs"))) 
-            {
-                Console.WriteLine(callable.Modifiers.Access + " " + callable.FullName + " | " + callable.SourceFile);
-            }
-
             var rewriter = new RewriteAccessModifiers();
             transformed = rewriter.OnCompilation(compilation);
-
-            Console.WriteLine("Callables after transformation:");
-            foreach (var callable in transformed.Namespaces.Callables().Where(c => c.SourceFile.EndsWith(".qs"))) 
-            {
-                Console.WriteLine(callable.Modifiers.Access + " " + callable.FullName + " | " + callable.SourceFile);
-            }
             return true;
         }
 
